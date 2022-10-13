@@ -16,6 +16,7 @@ function NavBarNew() {
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#galery">Galery</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
+            <Nav.Link href="#form">Form</Nav.Link>
             <Cart />
           </Nav>
         </Navbar.Collapse>
