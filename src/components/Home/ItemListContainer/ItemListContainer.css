@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+}
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.filtro{
+    margin: 20px 15px 20px 25px;
+    font-size: 20px;
+}
+.catalogo{
+    margin-top:40px;
+}
+.principal-container{
+    padding: 15px;
+}

@@ -1,0 +1,13 @@
+body{
+    
+    color: white;
+}
+
+.navBar{
+    height: 60px;
+}
+.navBar a{
+    margin-left: 50px;
+    text-decoration: none;
+    color: white;
+}
