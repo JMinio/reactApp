@@ -4,10 +4,29 @@ import carsApi from '../../../APIrest/galeryApi';
 import Card from '../Item/Item';
 import { useParams } from 'react-router-dom';
 
-function ItemListContainer() {
+    function ItemListContainer() {
 
     const [filter, setFilter] = useState('');
     const { marca } = useParams();
+
+    const getApi = () => {
+    return new Promise(
+        (resolve,reject)=>{
+            setTimeout(
+                ()=>{
+                    resolve(carsApi);
+                },3000
+            )
+        }
+    )
+}
+
+async function fetchCars(){
+    const carsPromise = await getApi();
+    console.log(carsPromise);
+}
+
+fetchCars();
 
     return ( /* ACA TENGO SE CREAN LAS CARDS*/
 
@@ -23,9 +42,8 @@ function ItemListContainer() {
                 value={filter}
                 onChange={(car) => setFilter(car.target.value)}
             />
-
-            <div className="cards-container">
-
+ 
+        <div className="cards-container">
                 {marca ? carsApi
                     .filter(c => c.brand.includes(filter))
                     .filter((c) => c.category === marca)
@@ -54,7 +72,6 @@ function ItemListContainer() {
                             />
                         ))}
 
-                { }
             </div>
 
         </div>

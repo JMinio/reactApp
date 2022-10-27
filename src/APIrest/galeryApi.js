@@ -80,6 +80,25 @@ const carsApi = [
 
 }];
 
+/* const getApi = () => {
+    return new Promise(
+        (resolve,reject)=>{
+            setTimeout(
+                ()=>{
+                    resolve(carsApi);
+                },3000
+            )
+        }
+    )
+}
+
+async function fetchCars(){
+    const carsPromise = await getApi();
+    console.log(carsPromise);
+}
+
+fetchCars();
+ */
 export const getObjectById = (id) => {
     return carsApi[id]; 
 }
